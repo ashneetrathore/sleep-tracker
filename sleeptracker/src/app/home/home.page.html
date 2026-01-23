@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            Sleep Tracker
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <ion-card (click)="navigate('overnight-sleep-data')">
+        <ion-card-header>
+            <ion-card-title>Log Overnight Sleep</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            Click here to record your overnight sleep
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card (click)="navigate('stanford-sleepiness-data')">
+        <ion-card-header>
+            <ion-card-title>Log Sleepiness</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            Click here to log your sleepiness according to the Stanford Sleep Scale
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card (click)="navigate('view-overnight-sleep-data')">
+        <ion-card-header>
+            <ion-card-title>View Overnight Sleep Logs</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            Click here to view your overnight sleep logs
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card (click)="navigate('view-stanford-sleepiness-data')">
+        <ion-card-header>
+            <ion-card-title>View Sleepiness Logs</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            Click here to view your Stanford sleepiness logs
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>
