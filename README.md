@@ -12,10 +12,10 @@ This is an early version of the app, and improvements are currently in progress 
 **Tech Stack** | Ionic, Angular, TypeScript, HTML, SCSS
 
 ## :film_strip: DEMO
-[Watch the demo on Youtube]()
+[Watch the demo on Youtube](https://www.youtube.com/watch?v=HSIQ8atSV0A)
 
 ## :classical_building: ARCHITECTURE
-SleepTracker is implemented as a **client-side application** in **Ionic**, with application logic organized around **Angular** page components, services, and shared data models. Ionic provides the built-in mobile UI components, such as the date/time picker, cards, and buttons, while the layout and styling of the page components are defined using **HTML** and **SCSS**. Rather than relying on a backend server or server-side database, the app manages sleep data locally within the client.
+Sleep Tracker is implemented as a **client-side application** in **Ionic**, with application logic organized around **Angular** page components, services, and shared data models. Ionic provides the built-in mobile UI components, such as the date/time picker, cards, and buttons, and the layout and styling of the page components are defined using **HTML** and **SCSS**. Rather than relying on a backend server or server-side database, the app manages sleep data locally within the client.
 
 Once users record their overnight sleep duration or their sleepiness level, the corresponding page component captures the input and processes it into a structured **TypeScript** object, using a shared base `SleepData` class with specialized `OvernightSleepData` and `StandfordSleepinessData` subclasses depending on the entry type.
 
@@ -31,7 +31,7 @@ SleepTracker/
 │       └── app/
 │           │── data/                            # Defines TypeScript classes for sleep data
 │           │── services/                        # Manages and retrieves in-memory logged sleep data
-│           │── home/                            # Implements the main landing page
+│           │── home/                            # Implements the home page component
 │           │── overnight-sleep-data/            # Implements the page component for logging overnight sleep
 │           │── stanford-sleepiness-data/        # Implements the page component for logging sleepiness
 │           │── view-overnight-sleep-data/       # Implements the page component for viewing overnight sleep log
