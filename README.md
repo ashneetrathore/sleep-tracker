@@ -5,9 +5,9 @@ Date: March 2025\
 Developer(s): Ashneet Rathore\
 Based on assignment instructions from Prof. Daniel Epstein
 
-Sleep Tracker is a mobile application designed to log and review a user’s sleep patterns and daily sleepiness levels. Users can record their overnight sleep durations by tracking bedtimes and wake times, as well as log their alertness using the [Stanford Sleepiness Scale](https://www.med.upenn.edu/cbti/assets/user-content/documents/Stanford%20Sleepiness%20Scale.pdf). Logged entries are presented through a simple, mobile-friendly interface that lets users view their recorded sleep and sleepiness data.
+Sleep Tracker is a mobile application designed for logging and reviewing sleep patterns and daily sleepiness levels. Users can record their overnight sleep durations by tracking bedtimes and wake times, as well as rate their alertness during the day using the [Stanford Sleepiness Scale](https://www.med.upenn.edu/cbti/assets/user-content/documents/Stanford%20Sleepiness%20Scale.pdf). Logged entries are presented through a simple, mobile-friendly interface that lets users view their recorded sleep and sleepiness data.
 
-This is an early version of the app, and improvements are currently in progress to add more features and improve the user experience!
+This is an early version of the app, and improvements are currently in progress to add more features and enhance the user experience!
 
 **Tech Stack** | Ionic, Angular, TypeScript, HTML, SCSS
 
@@ -15,13 +15,11 @@ This is an early version of the app, and improvements are currently in progress 
 [Watch the demo on Youtube]()
 
 ## :classical_building: ARCHITECTURE
-The SleepTracker application is implemented as a client-side Ionic application, with application logic organized around Angular components, services, and shared data models. Rather than relying on a backend server, the app manages sleep data locally in memory, making it well-suited for rapid interaction and lightweight mobile usage.
+SleepTracker is implemented as a **client-side application** in **Ionic**, with application logic organized around **Angular** page components, services, and shared data models. Ionic provides the built-in mobile UI components, such as the date/time picker, cards, and buttons, while the layout and styling of the page components are defined using **HTML** and **SCSS**. Rather than relying on a backend server or server-side database, the app manages sleep data locally within the client.
 
-Core sleep data structures are defined in the data directory, where a base sleep-data class is extended by overnight-sleep-data and stanford-sleepiness-data. This shared inheritance model allows both overnight sleep entries and daytime sleepiness logs to be handled uniformly when appropriate, while still supporting distinct fields and behaviors for each data type.
+Once users record their overnight sleep duration or their sleepiness level, the corresponding page component captures the input and processes it into a structured **TypeScript** object, using a shared base `SleepData` class with specialized `OvernightSleepData` and `StandfordSleepinessData` subclasses depending on the entry type.
 
-A centralized sleep.service acts as the data layer of the application. This service maintains static collections of logged sleep and sleepiness entries and exposes methods for adding new records and loading default sample data. Angular components interact with this service to submit user input and retrieve structured data for display, ensuring a clear separation between UI logic and data management.
-
-The frontend is built using Ionic and Angular with TypeScript, HTML, and CSS, providing a mobile-first, component-based interface. Dedicated pages handle logging overnight sleep and recording Stanford Sleepiness Scale entries, while corresponding view components present logged data in a readable format. Navigation between logging and viewing screens is handled through Angular routing, enabling a smooth and intuitive user experience consistent with mobile design principles.
+These entry objects are then passed to a shared service, which stores the objects in in-memory arrays, acting as the data layer of the application. When users view their logs, the corresponding page component interacts with this service to retrieve the structured sleep data for display. If a user chooses to remove a log, the page component invokes the service's removal method, updating the in-memory arrays accordingly, and refreshes the log view.
 
 ## :open_file_folder: PROJECT FILE STRUCTURE
 > [!NOTE]
@@ -34,10 +32,11 @@ SleepTracker/
 │           │── data/                            # Defines TypeScript classes for sleep data
 │           │── services/                        # Manages and retrieves in-memory logged sleep data
 │           │── home/                            # Implements the main landing page
-│           │── overnight-sleep-data/            # Implements the page for logging overnight sleep
-│           │── stanford-sleepiness-data/        # Implements the page for logging sleepiness
-│           │── view-overnight-sleep-data/       # Implements the page for viewing overnight sleep log
-│           └── view-stanford-sleepiness-data/   # Implements the page for viewing sleepiness log
+│           │── overnight-sleep-data/            # Implements the page component for logging overnight sleep
+│           │── stanford-sleepiness-data/        # Implements the page component for logging sleepiness
+│           │── view-overnight-sleep-data/       # Implements the page component for viewing overnight sleep log
+│           │── view-stanford-sleepiness-data/   # Implements the page component for viewing sleepiness log
+│           └── app.routes.ts                    # Maps URL routes to Angular pages
 │── README.md                                    # Project documentation
 └── .gitignore                                   # Excludes files and folders from version control
 ```
