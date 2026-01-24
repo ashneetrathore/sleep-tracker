@@ -5,7 +5,7 @@ Date: March 2025\
 Developer(s): Ashneet Rathore\
 Based on assignment instructions from Prof. Daniel Epstein
 
-Sleep Tracker is a mobile application designed to log and review a user’s sleep patterns and daily sleepiness levels. The app allows users to record overnight sleep sessions by tracking bedtimes and wake times, as well as log alertness using the [Stanford Sleepiness Scale](https://www.med.upenn.edu/cbti/assets/user-content/documents/Stanford%20Sleepiness%20Scale.pdf). Logged entries are presented through a simple, mobile-friendly interface that lets users view their recorded sleep and sleepiness data.
+Sleep Tracker is a mobile application designed to log and review a user’s sleep patterns and daily sleepiness levels. Users can record their overnight sleep durations by tracking bedtimes and wake times, as well as log their alertness using the [Stanford Sleepiness Scale](https://www.med.upenn.edu/cbti/assets/user-content/documents/Stanford%20Sleepiness%20Scale.pdf). Logged entries are presented through a simple, mobile-friendly interface that lets users view their recorded sleep and sleepiness data.
 
 **Tech Stack** | Ionic, Angular, TypeScript, HTML, SCSS
 
