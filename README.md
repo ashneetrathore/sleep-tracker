@@ -12,7 +12,7 @@ This is an early version of the app, and improvements are currently in progress 
 **Tech Stack** | Ionic, Angular, TypeScript, HTML, SCSS
 
 ## :film_strip: DEMO
-![Demo](demo.gif)
+[Watch the demo on Youtube](https://youtu.be/h1TvJz1TLyE)
 
 ## :classical_building: ARCHITECTURE
 Sleep Tracker is implemented as a **client-side** **Ionic** app built with **Angular** page components, services, and shared data models. Ionic provides the built-in mobile UI components, such as the date/time picker, cards, and buttons, and the layout and styling of the page components are defined using **HTML** and **SCSS**. Rather than relying on a backend server or server-side database, the app manages sleep data locally within the client.
