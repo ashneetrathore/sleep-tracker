@@ -15,11 +15,11 @@ This is an early version of the app, and improvements are currently in progress 
 [Watch the demo on Youtube](https://www.youtube.com/watch?v=HSIQ8atSV0A)
 
 ## :classical_building: ARCHITECTURE
-Sleep Tracker is implemented as a **client-side application** in **Ionic**, with application logic organized around **Angular** page components, services, and shared data models. Ionic provides the built-in mobile UI components, such as the date/time picker, cards, and buttons, and the layout and styling of the page components are defined using **HTML** and **SCSS**. Rather than relying on a backend server or server-side database, the app manages sleep data locally within the client.
+Sleep Tracker is implemented as a **client-side** **Ionic** app built with **Angular** page components, services, and shared data models. Ionic provides the built-in mobile UI components, such as the date/time picker, cards, and buttons, and the layout and styling of the page components are defined using **HTML** and **SCSS**. Rather than relying on a backend server or server-side database, the app manages sleep data locally within the client.
 
-Once users record their overnight sleep duration or their sleepiness level, the corresponding page component captures the input and processes it into a structured **TypeScript** object, using a shared base `SleepData` class with specialized `OvernightSleepData` and `StandfordSleepinessData` subclasses depending on the entry type.
+Once users record their overnight sleep duration or their sleepiness level, the corresponding page component captures the input and processes it into a structured **TypeScript** object, using a shared base `SleepData` class with specialized `OvernightSleepData` and `StanfordSleepinessData` subclasses depending on the entry type.
 
-These entry objects are then passed to a shared service, which stores the objects in in-memory arrays, acting as the data layer of the application. When users view their logs, the corresponding page component interacts with this service to retrieve the structured sleep data for display. If a user chooses to remove a log, the page component invokes the service's removal method, updating the in-memory arrays accordingly, and refreshes the log view.
+These entry objects are then passed to a shared service, which stores the objects in in-memory arrays, acting as the data layer of the application. When users view their logs, the appropriate page component interacts with this service to retrieve the structured sleep data for display. If a user chooses to remove a log, the page component invokes the service's removal method, updating the in-memory arrays accordingly, and refreshes the log view.
 
 ## :open_file_folder: PROJECT FILE STRUCTURE
 > [!NOTE]
