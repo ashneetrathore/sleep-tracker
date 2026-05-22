@@ -25,7 +25,7 @@ These entry objects are then passed to a shared service, which stores the object
 > [!NOTE]
 > The overview of the file structure is intentionally kept minimal. Additional directories/files exist in the project.
 ```bash
-SleepTracker/
+sleep-tracker/
 │── sleeptracker/
 │   └── src/
 │       └── app/
@@ -44,12 +44,12 @@ SleepTracker/
 ## :rocket: SET UP & EXECUTION
 **1. Clone the repository**
 ```bash
-git clone https://github.com/ashneetrathore/SleepTracker.git
+git clone https://github.com/ashneetrathore/sleep-tracker.git
 ```
 
 **2. Install dependencies in `sleeptracker/`**
 ```bash
-cd SleepTracker/sleeptracker
+cd sleep-tracker/sleeptracker
 npm install
 ```
 
