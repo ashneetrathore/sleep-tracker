@@ -39,8 +39,7 @@ sleep-tracker/
 │── README.md                                    # Project documentation
 └── .gitignore                                   # Ignored files
 ```
-
-## :rocket: SET UP & EXECUTION
+## :hammer: CONFIGURATION
 **1. Clone the repository**
 ```bash
 git clone https://github.com/ashneetrathore/sleep-tracker.git
@@ -52,7 +51,7 @@ cd sleep-tracker/sleeptracker
 npm install
 ```
 
-**3. Run the Ionic app**
+## :rocket: EXECUTION
 ```bash
 ionic serve
 ```
