@@ -12,7 +12,7 @@ Sleep Tracker is a mobile application for logging and reviewing sleep patterns a
 [Watch the demo on Youtube](https://youtu.be/h1TvJz1TLyE)
 
 ## :classical_building: ARCHITECTURE
-Sleep Tracker is implemented as a **client-side** **Ionic** app built with **Angular** page components, services, and shared data models. Ionic provides built-in mobile UI components such as the date/time picker, cards, and buttons, and the layout and styling of the page components are defined using **HTML** and **SCSS**. Because a persistent database has not been implemented, sleep data is managed in-memory within the client and does not persist between sessions.
+Sleep Tracker is implemented as an **Ionic** app built with **Angular**, with page components, services, and shared data models. Ionic provides built-in mobile UI components such as the date/time picker, cards, and buttons, and the layout and styling of the page components are defined using **HTML** and **SCSS**. Because a persistent database has not been implemented, sleep data is managed in-memory within the client and does not persist between sessions.
 
 Flow of a sleep entry:
 - Angular page component captures user input and processes it into a structured TypeScript object
