@@ -6,17 +6,17 @@ Developer(s): Ashneet Rathore
 
 Sleep Tracker is a mobile application for logging and reviewing sleep patterns and daily sleepiness levels. Users can record their overnight sleep durations by tracking bedtimes and wake times, as well as rate their alertness during the day using the [Stanford Sleepiness Scale](https://www.med.upenn.edu/cbti/assets/user-content/documents/Stanford%20Sleepiness%20Scale.pdf). Logged entries are presented through a simple, mobile-friendly interface for viewing recorded sleep and sleepiness data.
 
-**Tech Stack** | Ionic, Angular, TypeScript, HTML, SCSS
+**Tech Stack** | Angular, Ionic, HTML, SCSS
 
 ## :film_strip: DEMO
 [Watch the demo on Youtube](https://youtu.be/h1TvJz1TLyE)
 
 ## :classical_building: ARCHITECTURE
-Sleep Tracker is implemented as an **Ionic** app built with **Angular**, with page components, services, and shared data models. Ionic provides built-in mobile UI components such as the date/time picker, cards, and buttons, and the layout and styling of the page components are defined using **HTML** and **SCSS**. Because a persistent database has not been implemented, sleep data is managed in-memory within the client and does not persist between sessions.
+Sleep Tracker is implemented as an Ionic app built with Angular page components, services, and shared data models. Ionic provides built-in mobile UI components such as the date/time picker, cards, and buttons, and the layout and styling of the page components are defined using HTML and SCSS. Because a persistent database has not been implemented, sleep data is managed in-memory within the client and does not persist between sessions.
 
 Flow of a sleep entry:
 - Angular page component captures user input and processes it into a structured TypeScript object
-- Typescript object is passed to a shared Angular service (acting as the data layer), which stores entries in in-memory arrays
+- Typescript object is passed to a shared Angular service acting as the data layer, which stores entries in in-memory arrays
 - When viewing logs, the page component retrieves the stored entries from the service for display
 - When removing an entry from the log, the page component invokes the service to update the in-memory arrays and refresh the view
 
